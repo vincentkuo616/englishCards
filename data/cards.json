@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108197745",
+    "front": "Mogul",
+    "phonetic": "/ˈmoʊɡəl/",
+    "partOfSpeech": "n.",
+    "translation": "大亨，巨頭",
+    "example": "He's a media mogul with interests in television and publishing.",
+    "exampleTranslation": "他是一位在電視和出版業都有投資的媒體大亨。",
+    "createdAt": 1792108197745
+  },
+  {
     "id": "card_1792108173866",
     "front": "Ceramic",
     "phonetic": "/səˈræmɪk/",
