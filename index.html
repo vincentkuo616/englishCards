@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VocabFlip - 智慧背單字卡</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-preserve-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans">
+
+  <!-- 頂部導航列 -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-indigo-600 text-white p-2 rounded-xl shadow-md">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-slate-900">VocabFlip</h1>
+          <p class="text-xs text-slate-500 font-medium">Gemini 驅動的英文單字卡</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="start-review-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-1.5 shadow-sm transition active:scale-95">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          開始複習 (20)
+        </button>
+
+        <button id="settings-btn" title="設定 API Key" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="max-w-5xl mx-auto px-4 py-8 flex-1 w-full space-y-8">
+    
+    <!-- 新增單字卡卡片 -->
+    <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+      <h2 class="text-base font-semibold text-slate-800 mb-3 flex items-center gap-2">
+        <span>✨ 建立新單字卡</span>
+        <span class="text-xs font-normal text-slate-500">（背面由 Gemini 自動翻譯、標註音標與例句）</span>
+      </h2>
+      <form id="add-word-form" class="flex flex-col sm:flex-row gap-3">
+        <div class="relative flex-1">
+          <input 
+            type="text" 
+            id="word-input" 
+            placeholder="輸入英文單字或片語（例：Umbrella, serendipity）..." 
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition text-slate-800"
+            required
+            autocomplete="off"
+          >
+        </div>
+        <button 
+          type="submit" 
+          id="submit-btn" 
+          class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3 rounded-xl transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+        >
+          <span id="btn-text">新增並自動翻譯</span>
+          <div id="btn-spinner" class="hidden w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        </button>
+      </form>
+    </section>
+
+    <!-- 單字庫統計與清單 -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <h2 class="text-lg font-bold text-slate-800">我的字卡庫</h2>
+          <span id="card-count" class="bg-indigo-100 text-indigo-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">0 張</span>
+        </div>
+        <div class="flex items-center gap-3 text-xs text-slate-500">
+          <button id="export-json-btn" class="hover:text-slate-800 underline">匯出 JSON</button>
+          <span>•</span>
+          <label class="hover:text-slate-800 underline cursor-pointer">
+            匯入備份
+            <input type="file" id="import-json-file" accept=".json" class="hidden">
+          </label>
+        </div>
+      </div>
+
+      <!-- 字卡清單網格 -->
+      <div id="cards-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- 動態渲染卡片 -->
+      </div>
+
+      <!-- 空資料提示 -->
+      <div id="empty-state" class="text-center py-16 bg-white border border-dashed border-slate-300 rounded-2xl hidden">
+        <div class="text-slate-300 mb-3 flex justify-center">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+        </div>
+        <p class="text-slate-600 font-medium">目前還沒有任何字卡</p>
+        <p class="text-xs text-slate-400 mt-1">請在上方輸入英文單字，開始建立專屬字卡集！</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 複習模式 Modal (全螢幕) -->
+  <div id="review-modal" class="fixed inset-0 bg-slate-900/90 z-50 backdrop-blur-sm hidden flex flex-col items-center justify-between p-4 sm:p-8">
+    <!-- 頂部進度與關閉 -->
+    <div class="w-full max-w-xl flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <span class="text-sm font-semibold tracking-wider text-slate-300" id="review-progress-text">1 / 20</span>
+        <div class="w-32 bg-slate-700 h-2 rounded-full overflow-hidden">
+          <div id="review-progress-bar" class="bg-indigo-500 h-full transition-all duration-300" style="width: 5%"></div>
+        </div>
+      </div>
+      <button id="close-review-btn" class="p-2 hover:bg-slate-800 rounded-lg text-slate-400 hover:text-white transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 3D 翻轉字卡主體 -->
+    <div class="w-full max-w-md h-96 perspective-1000 my-auto cursor-pointer select-none" id="flip-card-container">
+      <div id="flip-card-inner" class="w-full h-full relative transform-style-preserve-3d transition-transform duration-500 rounded-3xl shadow-2xl">
+        
+        <!-- 正面 -->
+        <div class="absolute inset-0 backface-hidden bg-white rounded-3xl border border-slate-100 p-8 flex flex-col items-center justify-center text-center shadow-lg">
+          <span class="text-xs font-semibold tracking-widest text-indigo-500 uppercase mb-4">Front • 點擊翻面</span>
+          <h3 id="review-front-word" class="text-4xl font-extrabold text-slate-800 tracking-tight mb-2">Word</h3>
+          <p id="review-front-phonetic" class="text-sm font-mono text-slate-400 mb-6">/wɜːrd/</p>
+          <button id="review-speak-btn" class="p-3 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-100 transition shadow-sm" title="朗讀發音">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 背面 -->
+        <div class="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-indigo-600 to-indigo-800 text-white rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg">
+          <span class="text-xs font-semibold tracking-widest text-indigo-200 uppercase mb-2">Back • 釋義與例句</span>
+          <div id="review-back-pos" class="text-xs font-semibold px-2 py-0.5 bg-indigo-500/50 rounded-md text-indigo-100 mb-2">noun</div>
+          <h4 id="review-back-trans" class="text-2xl font-bold mb-4">繁體中文釋義</h4>
+          <div class="w-full bg-white/10 rounded-xl p-4 text-left border border-white/10">
+            <p id="review-back-example" class="text-xs italic text-indigo-100 mb-1">"This is an example sentence."</p>
+            <p id="review-back-example-trans" class="text-xs text-indigo-200 font-light">這是一句範例例句翻譯。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 底部控制按鈕 -->
+    <div class="w-full max-w-md flex items-center justify-between gap-4">
+      <button id="prev-card-btn" class="flex-1 py-3 px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        上一張
+      </button>
+      <button id="flip-action-btn" class="flex-1 py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition shadow-md">
+        翻面對答案
+      </button>
+      <button id="next-card-btn" class="flex-1 py-3 px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-1">
+        下一張
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- API Key 設定彈窗 -->
+  <div id="settings-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-slate-200">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-base font-bold text-slate-900">Gemini API Key 設定</h3>
+        <button id="close-settings-btn" class="text-slate-400 hover:text-slate-600">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+        API Key 將只存於您的瀏覽器本地（LocalStorage），絕不會外洩至伺服器。若還沒有金鑰，可至 
+        <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="text-indigo-600 underline font-medium">Google AI Studio</a> 免費申請。
+      </p>
+      <div class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">API Key</label>
+          <input 
+            type="password" 
+            id="api-key-input" 
+            placeholder="AIzaSy..." 
+            class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+        </div>
+        <div class="flex justify-end gap-2">
+          <button id="save-key-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+            儲存設定
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 應用邏輯 JavaScript -->
+  <script>
+    // --- 狀態管理 ---
+    const STORAGE_KEY_CARDS = 'vocabflip_cards_v1';
+    const STORAGE_KEY_API_KEY = 'vocabflip_gemini_api_key';
+
+    let cards = JSON.parse(localStorage.getItem(STORAGE_KEY_CARDS)) || [];
+    let apiKey = localStorage.getItem(STORAGE_KEY_API_KEY) || '';
+
+    let reviewCards = [];
+    let reviewIndex = 0;
+    let isFlipped = false;
+
+    // --- DOM 節點快取 ---
+    const wordInput = document.getElementById('word-input');
+    const addWordForm = document.getElementById('add-word-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const cardsGrid = document.getElementById('cards-grid');
+    const emptyState = document.getElementById('empty-state');
+    const cardCountEl = document.getElementById('card-count');
+
+    // 複習模式節點
+    const reviewModal = document.getElementById('review-modal');
+    const startReviewBtn = document.getElementById('start-review-btn');
+    const closeReviewBtn = document.getElementById('close-review-btn');
+    const flipCardContainer = document.getElementById('flip-card-container');
+    const flipCardInner = document.getElementById('flip-card-inner');
+    const flipActionBtn = document.getElementById('flip-action-btn');
+    const prevCardBtn = document.getElementById('prev-card-btn');
+    const nextCardBtn = document.getElementById('next-card-btn');
+    const reviewProgressText = document.getElementById('review-progress-text');
+    const reviewProgressBar = document.getElementById('review-progress-bar');
+    const reviewFrontWord = document.getElementById('review-front-word');
+    const reviewFrontPhonetic = document.getElementById('review-front-phonetic');
+    const reviewBackPos = document.getElementById('review-back-pos');
+    const reviewBackTrans = document.getElementById('review-back-trans');
+    const reviewBackExample = document.getElementById('review-back-example');
+    const reviewBackExampleTrans = document.getElementById('review-back-example-trans');
+    const reviewSpeakBtn = document.getElementById('review-speak-btn');
+
+    // 設定節點
+    const settingsBtn = document.getElementById('settings-btn');
+    const settingsModal = document.getElementById('settings-modal');
+    const closeSettingsBtn = document.getElementById('close-settings-btn');
+    const apiKeyInput = document.getElementById('api-key-input');
+    const saveKeyBtn = document.getElementById('save-key-btn');
+    const exportJsonBtn = document.getElementById('export-json-btn');
+    const importJsonFile = document.getElementById('import-json-file');
+
+    // --- 初始化 ---
+    function init() {
+      renderCards();
+      setupEventListeners();
+      if (!apiKey) {
+        showSettingsModal();
+      }
+    }
+
+    // --- 事件監聽註冊 ---
+    function setupEventListeners() {
+      addWordForm.addEventListener('submit', handleAddWord);
+      startReviewBtn.addEventListener('click', startReview);
+      closeReviewBtn.addEventListener('click', closeReview);
+      
+      // 翻牌操作
+      flipCardContainer.addEventListener('click', toggleCardFlip);
+      flipActionBtn.addEventListener('click', toggleCardFlip);
+
+      // 上下一張
+      prevCardBtn.addEventListener('click', showPrevReviewCard);
+      nextCardBtn.addEventListener('click', showNextReviewCard);
+
+      // 發音
+      reviewSpeakBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speakWord(reviewCards[reviewIndex]?.front);
+      });
+
+      // 設定 Modal
+      settingsBtn.addEventListener('click', showSettingsModal);
+      closeSettingsBtn.addEventListener('click', hideSettingsModal);
+      saveKeyBtn.addEventListener('click', saveApiKey);
+
+      // 備份匯入與匯出
+      exportJsonBtn.addEventListener('click', exportCardsJSON);
+      importJsonFile.addEventListener('change', importCardsJSON);
+
+      // 鍵盤快捷鍵（複習模式下：Space 翻面，左右鍵切換）
+      window.addEventListener('keydown', (e) => {
+        if (reviewModal.classList.contains('hidden')) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          toggleCardFlip();
+        } else if (e.code === 'ArrowRight') {
+          showNextReviewCard();
+        } else if (e.code === 'ArrowLeft') {
+          showPrevReviewCard();
+        } else if (e.code === 'Escape') {
+          closeReview();
+        }
+      });
+    }
+
+    // --- Gemini API 串接 ---
+    async function translateWordWithGemini(word) {
+      if (!apiKey) {
+        showSettingsModal();
+        throw new Error('請先設定 Gemini API Key！');
+      }
+
+      const prompt = `Analyze this English word/phrase: "${word}".
+Respond ONLY in valid JSON matching this schema:
+{
+  "phonetic": "IPA phonetic symbol, e.g. /ʌmˈbrelə/",
+  "partOfSpeech": "part of speech abbreviation, e.g. n., v., adj.",
+  "translation": "Concise Traditional Chinese translation",
+  "example": "A simple practical English sentence using the word",
+  "exampleTranslation": "Traditional Chinese translation of the example sentence"
+}`;
+
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: {
+            responseMimeType: 'application/json'
+          }
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData?.error?.message || 'Gemini API 呼叫失敗，請檢查金鑰或網路。');
+      }
+
+      const data = await response.json();
+      const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      return JSON.parse(rawText);
+    }
+
+    // --- 新增字卡處理 ---
+    async function handleAddWord(e) {
+      e.preventDefault();
+      const rawWord = wordInput.value.trim();
+      if (!rawWord) return;
+
+      setLoading(true);
+
+      try {
+        const result = await translateWordWithGemini(rawWord);
+        
+        const newCard = {
+          id: 'card_' + Date.now(),
+          front: rawWord,
+          phonetic: result.phonetic || '',
+          partOfSpeech: result.partOfSpeech || '',
+          translation: result.translation || '',
+          example: result.example || '',
+          exampleTranslation: result.exampleTranslation || '',
+          createdAt: Date.now()
+        };
+
+        cards.unshift(newCard);
+        saveCards();
+        renderCards();
+        wordInput.value = '';
+      } catch (err) {
+        alert('翻譯失敗：' + err.message);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function setLoading(isLoading) {
+      submitBtn.disabled = isLoading;
+      if (isLoading) {
+        btnText.textContent = 'AI 翻譯中...';
+        btnSpinner.classList.remove('hidden');
+      } else {
+        btnText.textContent = '新增並自動翻譯';
+        btnSpinner.classList.add('hidden');
+      }
+    }
+
+    // --- 儲存與渲染字卡 ---
+    function saveCards() {
+      localStorage.setItem(STORAGE_KEY_CARDS, JSON.stringify(cards));
+      updateCardCount();
+    }
+
+    function updateCardCount() {
+      cardCountEl.textContent = `${cards.length} 張`;
+    }
+
+    function deleteCard(id) {
+      if (confirm('確定要刪除這張字卡嗎？')) {
+        cards = cards.filter(card => card.id !== id);
+        saveCards();
+        renderCards();
+      }
+    }
+
+    function renderCards() {
+      updateCardCount();
+      cardsGrid.innerHTML = '';
+
+      if (cards.length === 0) {
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      cards.forEach(card => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition flex flex-col justify-between';
+        cardEl.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-1">
+              <h3 class="text-lg font-bold text-slate-800 tracking-tight">${escapeHTML(card.front)}</h3>
+              <span class="text-xs font-semibold px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded">${escapeHTML(card.partOfSpeech || '詞性')}</span>
+            </div>
+            <p class="text-xs font-mono text-slate-400 mb-2">${escapeHTML(card.phonetic || '')}</p>
+            <p class="text-sm font-semibold text-indigo-600 mb-3">${escapeHTML(card.translation)}</p>
+            ${card.example ? `
+              <p class="text-xs text-slate-500 italic border-l-2 border-indigo-200 pl-2 mb-1">"${escapeHTML(card.example)}"</p>
+              <p class="text-xs text-slate-400 pl-2">${escapeHTML(card.exampleTranslation || '')}</p>
+            ` : ''}
+          </div>
+          <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100 text-xs">
+            <button onclick="speakWord('${escapeHTML(card.front)}')" class="text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+              發音
+            </button>
+            <button onclick="deleteCard('${card.id}')" class="text-slate-400 hover:text-rose-500 transition">刪除</button>
+          </div>
+        `;
+        cardsGrid.appendChild(cardEl);
+      });
+    }
+
+    // --- 複習功能 ---
+    function startReview() {
+      if (cards.length === 0) {
+        alert('您的字卡庫還是空的，請先新增單字！');
+        return;
+      }
+
+      // 洗牌抽 20 張
+      const shuffled = [...cards].sort(() => 0.5 - Math.random());
+      reviewCards = shuffled.slice(0, 20);
+      reviewIndex = 0;
+      isFlipped = false;
+
+      updateReviewCardUI();
+      reviewModal.classList.remove('hidden');
+    }
+
+    function closeReview() {
+      reviewModal.classList.add('hidden');
+    }
+
+    function toggleCardFlip() {
+      isFlipped = !isFlipped;
+      if (isFlipped) {
+        flipCardInner.classList.add('rotate-y-180');
+      } else {
+        flipCardInner.classList.remove('rotate-y-180');
+      }
+    }
+
+    function showNextReviewCard() {
+      if (reviewIndex < reviewCards.length - 1) {
+        reviewIndex++;
+        resetCardFlipAndShow();
+      } else {
+        if (confirm('恭喜！已完成這輪 20 張單字複習！是否再抽 20 張重新複習？')) {
+          startReview();
+        } else {
+          closeReview();
+        }
+      }
+    }
+
+    function showPrevReviewCard() {
+      if (reviewIndex > 0) {
+        reviewIndex--;
+        resetCardFlipAndShow();
+      }
+    }
+
+    function resetCardFlipAndShow() {
+      isFlipped = false;
+      flipCardInner.classList.remove('rotate-y-180');
+      updateReviewCardUI();
+    }
+
+    function updateReviewCardUI() {
+      const current = reviewCards[reviewIndex];
+      if (!current) return;
+
+      // 更新進度
+      reviewProgressText.textContent = `${reviewIndex + 1} / ${reviewCards.length}`;
+      reviewProgressBar.style.width = `${((reviewIndex + 1) / reviewCards.length) * 100}%`;
+
+      // 正面內容
+      reviewFrontWord.textContent = current.front;
+      reviewFrontPhonetic.textContent = current.phonetic || '';
+
+      // 背面內容
+      reviewBackPos.textContent = current.partOfSpeech || '詞性';
+      reviewBackTrans.textContent = current.translation;
+      reviewBackExample.textContent = current.example ? `"${current.example}"` : '';
+      reviewBackExampleTrans.textContent = current.exampleTranslation || '';
+    }
+
+    // --- 語音發音 (Web Speech API) ---
+    function speakWord(text) {
+      if (!window.speechSynthesis || !text) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // --- 設定 Modal 與 API Key 管理 ---
+    function showSettingsModal() {
+      apiKeyInput.value = apiKey;
+      settingsModal.classList.remove('hidden');
+    }
+
+    function hideSettingsModal() {
+      settingsModal.classList.add('hidden');
+    }
+
+    function saveApiKey() {
+      const key = apiKeyInput.value.trim();
+      if (!key) {
+        alert('請輸入有效的 API Key');
+        return;
+      }
+      apiKey = key;
+      localStorage.setItem(STORAGE_KEY_API_KEY, apiKey);
+      hideSettingsModal();
+      alert('Gemini API Key 儲存成功！');
+    }
+
+    // --- 備份與匯入功能 ---
+    function exportCardsJSON() {
+      if (cards.length === 0) return alert('目前沒有字卡可匯出');
+      const blob = new Blob([JSON.stringify(cards, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `vocabflip_backup_${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importCardsJSON(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const imported = JSON.parse(event.target.result);
+          if (Array.isArray(imported)) {
+            cards = imported;
+            saveCards();
+            renderCards();
+            alert(`成功匯入 ${imported.length} 張單字卡！`);
+          } else {
+            alert('檔案格式錯誤，需為陣列格式 JSON');
+          }
+        } catch (err) {
+          alert('解析 JSON 失敗：' + err.message);
+        }
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    }
+
+    function escapeHTML(str) {
+      return (str || '').replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    // 啟動應用
+    init();
+  </script>
+</body>
+</html>
