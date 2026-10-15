@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108277874",
+    "front": "Cert",
+    "phonetic": "/sɜːrt/",
+    "partOfSpeech": "n.",
+    "translation": "證書；必然的事",
+    "example": "He finally received his driving cert after passing the test.",
+    "exampleTranslation": "他通過考試後終於收到了他的駕駛證書。",
+    "createdAt": 1792108277874
+  },
+  {
     "id": "card_1792108267270",
     "front": "Diploma",
     "phonetic": "/dɪˈploʊmə/",
