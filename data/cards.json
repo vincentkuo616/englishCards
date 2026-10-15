@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108537143",
+    "front": "Antelope",
+    "phonetic": "/ˈæntɪloʊp/",
+    "partOfSpeech": "n.",
+    "translation": "羚羊",
+    "example": "An antelope is a swift animal known for its elegant horns.",
+    "exampleTranslation": "羚羊是一種以其優雅的角聞名的快速奔跑的動物。",
+    "createdAt": 1792108537143
+  },
+  {
     "id": "card_1792108473010",
     "front": "Expropriate",
     "phonetic": "/ɪksˈproʊprieɪt/",
