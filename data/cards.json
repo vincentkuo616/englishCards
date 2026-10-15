@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108473010",
+    "front": "Expropriate",
+    "phonetic": "/ɪksˈproʊprieɪt/",
+    "partOfSpeech": "v.",
+    "translation": "徵用, 沒收, 剝奪",
+    "example": "The government decided to expropriate private land for the construction of the new highway.",
+    "exampleTranslation": "政府決定徵用私人土地以建設新高速公路。",
+    "createdAt": 1792108473010
+  },
+  {
     "id": "card_1792108426795",
     "front": "Alienate",
     "phonetic": "/ˈeɪliəneɪt/",
