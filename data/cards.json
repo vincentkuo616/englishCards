@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108267270",
+    "front": "Diploma",
+    "phonetic": "/dɪˈploʊmə/",
+    "partOfSpeech": "n.",
+    "translation": "文憑",
+    "example": "She received her diploma after four years of study.",
+    "exampleTranslation": "她經過四年學習後獲得了文憑。",
+    "createdAt": 1792108267270
+  },
+  {
     "id": "card_1792108245517",
     "front": "Reap",
     "phonetic": "/ˈriːp/",
