@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108160979",
+    "front": "Stoneware",
+    "phonetic": "/ˈstoʊnweər/",
+    "partOfSpeech": "n.",
+    "translation": "粗陶器",
+    "example": "Stoneware is known for its durability and non-porous nature.",
+    "exampleTranslation": "粗陶器以其耐用和無孔的特性而聞名。",
+    "createdAt": 1792108160979
+  },
+  {
     "id": "card_1792108134194",
     "front": "Stretch",
     "phonetic": "/strɛtʃ/",
