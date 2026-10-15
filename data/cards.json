@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108134194",
+    "front": "Stretch",
+    "phonetic": "/strɛtʃ/",
+    "partOfSpeech": "v.",
+    "translation": "伸展，舒展",
+    "example": "It's important to stretch your muscles before exercising.",
+    "exampleTranslation": "運動前伸展肌肉很重要。",
+    "createdAt": 1792108134194
+  },
+  {
     "id": "card_1792074821052",
     "front": "opal",
     "phonetic": "/ˈoʊpl/",
