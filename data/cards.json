@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108330372",
+    "front": "Olive",
+    "phonetic": "/ˈɑːlɪv/",
+    "partOfSpeech": "n.",
+    "translation": "橄欖",
+    "example": "She added a few olives to the salad.",
+    "exampleTranslation": "她在沙拉裡加了幾顆橄欖。",
+    "createdAt": 1792108330372
+  },
+  {
     "id": "card_1792108277874",
     "front": "Cert",
     "phonetic": "/sɜːrt/",
