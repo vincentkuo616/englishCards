@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108370170",
+    "front": "Bulletin",
+    "phonetic": "/ˈbʊlɪtɪn/",
+    "partOfSpeech": "n.",
+    "translation": "公告；簡報；快報",
+    "example": "The school sent out a bulletin to parents about the upcoming holiday.",
+    "exampleTranslation": "學校向家長發出了一份關於即將到來的假期的公告。",
+    "createdAt": 1792108370170
+  },
+  {
     "id": "card_1792108341755",
     "front": "Neat",
     "phonetic": "/niːt/",
