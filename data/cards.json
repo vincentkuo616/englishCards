@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792074821052",
+    "front": "opal",
+    "phonetic": "/ˈoʊpl/",
+    "partOfSpeech": "n.",
+    "translation": "蛋白石",
+    "example": "She wore a necklace with a beautiful opal pendant.",
+    "exampleTranslation": "她戴著一條鑲有美麗蛋白石墜子的項鍊。",
+    "createdAt": 1792074821052
+  },
+  {
     "id": "card_1792074803847",
     "front": "mitt",
     "phonetic": "/mɪt/",
