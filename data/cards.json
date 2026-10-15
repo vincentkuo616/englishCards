@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108426795",
+    "front": "Alienate",
+    "phonetic": "/ˈeɪliəneɪt/",
+    "partOfSpeech": "v.",
+    "translation": "疏遠，離間",
+    "example": "His constant complaining began to alienate his colleagues.",
+    "exampleTranslation": "他不斷的抱怨開始疏遠他的同事。",
+    "createdAt": 1792108426795
+  },
+  {
     "id": "card_1792108370170",
     "front": "Bulletin",
     "phonetic": "/ˈbʊlɪtɪn/",
