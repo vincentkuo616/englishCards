@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108245517",
+    "front": "Reap",
+    "phonetic": "/ˈriːp/",
+    "partOfSpeech": "v.",
+    "translation": "收穫, 獲得",
+    "example": "You reap what you sow.",
+    "exampleTranslation": "種瓜得瓜，種豆得豆。",
+    "createdAt": 1792108245517
+  },
+  {
     "id": "card_1792108209575",
     "front": "Tycoon",
     "phonetic": "/taɪˈkuːn/",
