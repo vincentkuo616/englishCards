@@ -34,21 +34,34 @@
           </svg>
         </div>
         <div>
-          <h1 class="text-xl font-bold tracking-tight text-slate-900">VocabFlip</h1>
-          <p class="text-xs text-slate-500 font-medium">Gemini 驅動的英文單字卡</p>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl font-bold tracking-tight text-slate-900">VocabFlip</h1>
+            <!-- 雲端同步狀態標籤 -->
+            <span id="sync-status-badge" class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500">
+              本地模式
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">Gemini 翻譯 • GitHub 雲端跨裝置同步</p>
         </div>
       </div>
 
       <div class="flex items-center gap-2">
-        <button id="start-review-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm flex items-center gap-1.5 shadow-sm transition active:scale-95">
+        <button id="sync-btn" title="手動同步" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition hidden sm:flex items-center gap-1 text-xs font-medium">
+          <svg id="sync-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          <span id="sync-text">雲端同步</span>
+        </button>
+
+        <button id="start-review-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-lg font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition active:scale-95">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          開始複習 (20)
+          複習 (20)
         </button>
 
-        <button id="settings-btn" title="設定 API Key" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition">
+        <button id="settings-btn" title="設定" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -126,7 +139,6 @@
 
   <!-- 複習模式 Modal (全螢幕) -->
   <div id="review-modal" class="fixed inset-0 bg-slate-900/90 z-50 backdrop-blur-sm hidden flex flex-col items-center justify-between p-4 sm:p-8">
-    <!-- 頂部進度與關閉 -->
     <div class="w-full max-w-xl flex items-center justify-between text-white">
       <div class="flex items-center gap-3">
         <span class="text-sm font-semibold tracking-wider text-slate-300" id="review-progress-text">1 / 20</span>
@@ -144,7 +156,6 @@
     <!-- 3D 翻轉字卡主體 -->
     <div class="w-full max-w-md h-96 perspective-1000 my-auto cursor-pointer select-none" id="flip-card-container">
       <div id="flip-card-inner" class="w-full h-full relative transform-style-preserve-3d transition-transform duration-500 rounded-3xl shadow-2xl">
-        
         <!-- 正面 -->
         <div class="absolute inset-0 backface-hidden bg-white rounded-3xl border border-slate-100 p-8 flex flex-col items-center justify-center text-center shadow-lg">
           <span class="text-xs font-semibold tracking-widest text-indigo-500 uppercase mb-4">Front • 點擊翻面</span>
@@ -167,7 +178,6 @@
             <p id="review-back-example-trans" class="text-xs text-indigo-200 font-light">這是一句範例例句翻譯。</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -178,7 +188,7 @@
         上一張
       </button>
       <button id="flip-action-btn" class="flex-1 py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition shadow-md">
-        翻面對答案
+        翻面
       </button>
       <button id="next-card-btn" class="flex-1 py-3 px-4 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl text-sm font-medium transition flex items-center justify-center gap-1">
         下一張
@@ -187,52 +197,99 @@
     </div>
   </div>
 
-  <!-- API Key 設定彈窗 -->
+  <!-- 設定彈窗 (包含 Gemini Key & GitHub 同步) -->
   <div id="settings-modal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-slate-200">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-xl border border-slate-200 max-h-[90vh] overflow-y-auto">
       <div class="flex items-center justify-between mb-4">
-        <h3 class="text-base font-bold text-slate-900">Gemini API Key 設定</h3>
+        <h3 class="text-base font-bold text-slate-900">系統與同步設定</h3>
         <button id="close-settings-btn" class="text-slate-400 hover:text-slate-600">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
-      <p class="text-xs text-slate-500 mb-4 leading-relaxed">
-        API Key 將只存於您的瀏覽器本地（LocalStorage），絕不會外洩至伺服器。若還沒有金鑰，可至 
-        <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="text-indigo-600 underline font-medium">Google AI Studio</a> 免費申請。
-      </p>
-      <div class="space-y-4">
-        <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">API Key</label>
+
+      <div class="space-y-6">
+        <!-- 1. Gemini 設定 -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <h4 class="text-sm font-bold text-slate-800 mb-1 flex items-center gap-1.5">
+            <span>🤖 Gemini API Key</span>
+            <span class="text-[10px] text-rose-500 font-normal">（必填）</span>
+          </h4>
+          <p class="text-xs text-slate-500 mb-2">
+            用於自動翻譯單字。可至 
+            <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer" class="text-indigo-600 underline">Google AI Studio</a> 免費取得。
+          </p>
           <input 
             type="password" 
             id="api-key-input" 
             placeholder="AIzaSy..." 
-            class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
           >
         </div>
-        <div class="flex justify-end gap-2">
-          <button id="save-key-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
-            儲存設定
+
+        <!-- 2. GitHub 跨裝置同步設定 -->
+        <div class="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100">
+          <h4 class="text-sm font-bold text-indigo-950 mb-1 flex items-center gap-1.5">
+            <span>☁️ GitHub 跨裝置同步（手機與電腦同步）</span>
+          </h4>
+          <p class="text-xs text-indigo-900/70 mb-3 leading-relaxed">
+            設定後，單字將自動保存至您 GitHub 儲存庫的 <code class="text-xs bg-indigo-100 px-1 rounded">data/cards.json</code>，在任何裝置打開都能即時載入。
+          </p>
+
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">GitHub 倉庫（格式：帳號/倉庫名）</label>
+              <input 
+                type="text" 
+                id="gh-repo-input" 
+                placeholder="例如：myname/vocab-cards" 
+                class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
+              >
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">GitHub Token (Fine-grained PAT)</label>
+              <input 
+                type="password" 
+                id="gh-token-input" 
+                placeholder="github_pat_..." 
+                class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 font-mono"
+              >
+              <span class="text-[10px] text-slate-500 mt-1 block">需要此倉庫的 Contents: Read and write 權限。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-2">
+          <button id="force-pull-btn" class="text-xs text-indigo-600 hover:text-indigo-800 underline font-medium">
+            從 GitHub 重新下載字卡
+          </button>
+          <button id="save-settings-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition shadow-sm">
+            儲存所有設定
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 應用邏輯 JavaScript -->
+  <!-- JavaScript 核心程式碼 -->
   <script>
-    // --- 狀態管理 ---
+    // --- 本機儲存 Key ---
     const STORAGE_KEY_CARDS = 'vocabflip_cards_v1';
     const STORAGE_KEY_API_KEY = 'vocabflip_gemini_api_key';
+    const STORAGE_KEY_GH_TOKEN = 'vocabflip_gh_token';
+    const STORAGE_KEY_GH_REPO = 'vocabflip_gh_repo';
+    const CARDS_FILE_PATH = 'data/cards.json';
 
     let cards = JSON.parse(localStorage.getItem(STORAGE_KEY_CARDS)) || [];
     let apiKey = localStorage.getItem(STORAGE_KEY_API_KEY) || '';
+    let ghToken = localStorage.getItem(STORAGE_KEY_GH_TOKEN) || '';
+    let ghRepo = localStorage.getItem(STORAGE_KEY_GH_REPO) || '';
+    let currentFileSha = null;
 
     let reviewCards = [];
     let reviewIndex = 0;
     let isFlipped = false;
 
-    // --- DOM 節點快取 ---
+    // DOM 元素快取
     const wordInput = document.getElementById('word-input');
     const addWordForm = document.getElementById('add-word-form');
     const submitBtn = document.getElementById('submit-btn');
@@ -241,8 +298,11 @@
     const cardsGrid = document.getElementById('cards-grid');
     const emptyState = document.getElementById('empty-state');
     const cardCountEl = document.getElementById('card-count');
+    const syncStatusBadge = document.getElementById('sync-status-badge');
+    const syncBtn = document.getElementById('sync-btn');
+    const syncIcon = document.getElementById('sync-icon');
 
-    // 複習模式節點
+    // 複習元素
     const reviewModal = document.getElementById('review-modal');
     const startReviewBtn = document.getElementById('start-review-btn');
     const closeReviewBtn = document.getElementById('close-review-btn');
@@ -261,70 +321,152 @@
     const reviewBackExampleTrans = document.getElementById('review-back-example-trans');
     const reviewSpeakBtn = document.getElementById('review-speak-btn');
 
-    // 設定節點
+    // 設定元素
     const settingsBtn = document.getElementById('settings-btn');
     const settingsModal = document.getElementById('settings-modal');
     const closeSettingsBtn = document.getElementById('close-settings-btn');
     const apiKeyInput = document.getElementById('api-key-input');
-    const saveKeyBtn = document.getElementById('save-key-btn');
+    const ghRepoInput = document.getElementById('gh-repo-input');
+    const ghTokenInput = document.getElementById('gh-token-input');
+    const saveSettingsBtn = document.getElementById('save-settings-btn');
+    const forcePullBtn = document.getElementById('force-pull-btn');
     const exportJsonBtn = document.getElementById('export-json-btn');
     const importJsonFile = document.getElementById('import-json-file');
 
     // --- 初始化 ---
-    function init() {
+    async function init() {
+      updateSyncBadge();
       renderCards();
       setupEventListeners();
-      if (!apiKey) {
+
+      if (ghToken && ghRepo) {
+        // 若有設定 GitHub 同步，網頁啟動時自動從 GitHub 下載最新單字
+        await syncFromGitHub();
+      } else if (!apiKey) {
         showSettingsModal();
       }
     }
 
-    // --- 事件監聽註冊 ---
-    function setupEventListeners() {
-      addWordForm.addEventListener('submit', handleAddWord);
-      startReviewBtn.addEventListener('click', startReview);
-      closeReviewBtn.addEventListener('click', closeReview);
-      
-      // 翻牌操作
-      flipCardContainer.addEventListener('click', toggleCardFlip);
-      flipActionBtn.addEventListener('click', toggleCardFlip);
-
-      // 上下一張
-      prevCardBtn.addEventListener('click', showPrevReviewCard);
-      nextCardBtn.addEventListener('click', showNextReviewCard);
-
-      // 發音
-      reviewSpeakBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        speakWord(reviewCards[reviewIndex]?.front);
-      });
-
-      // 設定 Modal
-      settingsBtn.addEventListener('click', showSettingsModal);
-      closeSettingsBtn.addEventListener('click', hideSettingsModal);
-      saveKeyBtn.addEventListener('click', saveApiKey);
-
-      // 備份匯入與匯出
-      exportJsonBtn.addEventListener('click', exportCardsJSON);
-      importJsonFile.addEventListener('change', importCardsJSON);
-
-      // 鍵盤快捷鍵（複習模式下：Space 翻面，左右鍵切換）
-      window.addEventListener('keydown', (e) => {
-        if (reviewModal.classList.contains('hidden')) return;
-        if (e.code === 'Space') {
-          e.preventDefault();
-          toggleCardFlip();
-        } else if (e.code === 'ArrowRight') {
-          showNextReviewCard();
-        } else if (e.code === 'ArrowLeft') {
-          showPrevReviewCard();
-        } else if (e.code === 'Escape') {
-          closeReview();
-        }
-      });
+    // --- UTF-8 與 Base64 安全轉換（避免中文亂碼） ---
+    function utf8ToBase64(str) {
+      const bytes = new TextEncoder().encode(str);
+      const binary = Array.from(bytes, b => String.fromCharCode(b)).join('');
+      return btoa(binary);
     }
 
-    // --- Gemini API 串接 ---
+    function base64ToUtf8(str) {
+      const binary = atob(str.replace(/\s/g, ''));
+      const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+      return new TextDecoder().decode(bytes);
+    }
+
+    // --- GitHub 雲端同步函式 ---
+    async function syncFromGitHub(notify = false) {
+      if (!ghToken || !ghRepo) return;
+      setSyncingState(true);
+
+      try {
+        const url = `https://api.github.com/repos/${ghRepo}/contents/${CARDS_FILE_PATH}`;
+        const res = await fetch(url, {
+          headers: {
+            'Authorization': `Bearer ${ghToken}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+
+        if (res.status === 404) {
+          // 檔案尚未建立，若本地有資料則直接上傳建立
+          if (cards.length > 0) {
+            await syncToGitHub();
+          }
+          setSyncingState(false);
+          return;
+        }
+
+        if (!res.ok) throw new Error('無法讀取 GitHub 儲存庫');
+
+        const data = await res.json();
+        currentFileSha = data.sha;
+        const decodedContent = base64ToUtf8(data.content);
+        const remoteCards = JSON.parse(decodedContent);
+
+        if (Array.isArray(remoteCards)) {
+          cards = remoteCards;
+          localStorage.setItem(STORAGE_KEY_CARDS, JSON.stringify(cards));
+          renderCards();
+          if (notify) alert('已成功從 GitHub 載入最新單字庫！');
+        }
+      } catch (err) {
+        console.error('從 GitHub 讀取失敗:', err);
+        if (notify) alert('同步失敗：' + err.message);
+      } finally {
+        setSyncingState(false);
+      }
+    }
+
+    async function syncToGitHub() {
+      if (!ghToken || !ghRepo) return;
+      setSyncingState(true);
+
+      try {
+        const jsonString = JSON.stringify(cards, null, 2);
+        const base64Content = utf8ToBase64(jsonString);
+        const url = `https://api.github.com/repos/${ghRepo}/contents/${CARDS_FILE_PATH}`;
+
+        const payload = {
+          message: `Sync vocabulary cards (${cards.length} cards)`,
+          content: base64Content
+        };
+        if (currentFileSha) {
+          payload.sha = currentFileSha;
+        }
+
+        const res = await fetch(url, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `Bearer ${ghToken}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          const errData = await res.json();
+          throw new Error(errData.message || 'GitHub 上傳失敗');
+        }
+
+        const result = await res.json();
+        currentFileSha = result.content.sha;
+      } catch (err) {
+        console.error('同步至 GitHub 失敗:', err);
+      } finally {
+        setSyncingState(false);
+      }
+    }
+
+    function setSyncingState(isSyncing) {
+      if (isSyncing) {
+        syncIcon.classList.add('animate-spin');
+        syncStatusBadge.textContent = '同步中...';
+        syncStatusBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 animate-pulse';
+      } else {
+        syncIcon.classList.remove('animate-spin');
+        updateSyncBadge();
+      }
+    }
+
+    function updateSyncBadge() {
+      if (ghToken && ghRepo) {
+        syncStatusBadge.textContent = '☁️ 雲端已連線';
+        syncStatusBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700';
+      } else {
+        syncStatusBadge.textContent = '本地模式';
+        syncStatusBadge.className = 'text-[10px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500';
+      }
+    }
+
+    // --- Gemini 翻譯 ---
     async function translateWordWithGemini(word) {
       if (!apiKey) {
         showSettingsModal();
@@ -348,15 +490,13 @@ Respond ONLY in valid JSON matching this schema:
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            responseMimeType: 'application/json'
-          }
+          generationConfig: { responseMimeType: 'application/json' }
         })
       });
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData?.error?.message || 'Gemini API 呼叫失敗，請檢查金鑰或網路。');
+        throw new Error(errorData?.error?.message || 'Gemini API 呼叫失敗，請檢查金鑰。');
       }
 
       const data = await response.json();
@@ -364,7 +504,7 @@ Respond ONLY in valid JSON matching this schema:
       return JSON.parse(rawText);
     }
 
-    // --- 新增字卡處理 ---
+    // --- 新增字卡 ---
     async function handleAddWord(e) {
       e.preventDefault();
       const rawWord = wordInput.value.trim();
@@ -387,9 +527,12 @@ Respond ONLY in valid JSON matching this schema:
         };
 
         cards.unshift(newCard);
-        saveCards();
+        saveCardsLocally();
         renderCards();
         wordInput.value = '';
+
+        // 背景非同步同步至 GitHub
+        syncToGitHub();
       } catch (err) {
         alert('翻譯失敗：' + err.message);
       } finally {
@@ -408,8 +551,7 @@ Respond ONLY in valid JSON matching this schema:
       }
     }
 
-    // --- 儲存與渲染字卡 ---
-    function saveCards() {
+    function saveCardsLocally() {
       localStorage.setItem(STORAGE_KEY_CARDS, JSON.stringify(cards));
       updateCardCount();
     }
@@ -418,11 +560,12 @@ Respond ONLY in valid JSON matching this schema:
       cardCountEl.textContent = `${cards.length} 張`;
     }
 
-    function deleteCard(id) {
+    async function deleteCard(id) {
       if (confirm('確定要刪除這張字卡嗎？')) {
         cards = cards.filter(card => card.id !== id);
-        saveCards();
+        saveCardsLocally();
         renderCards();
+        await syncToGitHub();
       }
     }
 
@@ -454,7 +597,7 @@ Respond ONLY in valid JSON matching this schema:
             ` : ''}
           </div>
           <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-100 text-xs">
-            <button onclick="speakWord('${escapeHTML(card.front)}')" class="text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <button onclick="speakWord('${escapeHTML(card.front)}')" class="text-indigo-600 hover:text-indigo-800 flex items-center gap-1 font-medium">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
               發音
             </button>
@@ -465,14 +608,12 @@ Respond ONLY in valid JSON matching this schema:
       });
     }
 
-    // --- 複習功能 ---
+    // --- 複習模式 ---
     function startReview() {
       if (cards.length === 0) {
         alert('您的字卡庫還是空的，請先新增單字！');
         return;
       }
-
-      // 洗牌抽 20 張
       const shuffled = [...cards].sort(() => 0.5 - Math.random());
       reviewCards = shuffled.slice(0, 20);
       reviewIndex = 0;
@@ -525,22 +666,17 @@ Respond ONLY in valid JSON matching this schema:
       const current = reviewCards[reviewIndex];
       if (!current) return;
 
-      // 更新進度
       reviewProgressText.textContent = `${reviewIndex + 1} / ${reviewCards.length}`;
       reviewProgressBar.style.width = `${((reviewIndex + 1) / reviewCards.length) * 100}%`;
 
-      // 正面內容
       reviewFrontWord.textContent = current.front;
       reviewFrontPhonetic.textContent = current.phonetic || '';
-
-      // 背面內容
       reviewBackPos.textContent = current.partOfSpeech || '詞性';
       reviewBackTrans.textContent = current.translation;
       reviewBackExample.textContent = current.example ? `"${current.example}"` : '';
       reviewBackExampleTrans.textContent = current.exampleTranslation || '';
     }
 
-    // --- 語音發音 (Web Speech API) ---
     function speakWord(text) {
       if (!window.speechSynthesis || !text) return;
       window.speechSynthesis.cancel();
@@ -550,9 +686,51 @@ Respond ONLY in valid JSON matching this schema:
       window.speechSynthesis.speak(utterance);
     }
 
-    // --- 設定 Modal 與 API Key 管理 ---
+    // --- 事件監聽 ---
+    function setupEventListeners() {
+      addWordForm.addEventListener('submit', handleAddWord);
+      startReviewBtn.addEventListener('click', startReview);
+      closeReviewBtn.addEventListener('click', closeReview);
+      
+      flipCardContainer.addEventListener('click', toggleCardFlip);
+      flipActionBtn.addEventListener('click', toggleCardFlip);
+      prevCardBtn.addEventListener('click', showPrevReviewCard);
+      nextCardBtn.addEventListener('click', showNextReviewCard);
+
+      reviewSpeakBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        speakWord(reviewCards[reviewIndex]?.front);
+      });
+
+      settingsBtn.addEventListener('click', showSettingsModal);
+      closeSettingsBtn.addEventListener('click', hideSettingsModal);
+      saveSettingsBtn.addEventListener('click', saveAllSettings);
+      forcePullBtn.addEventListener('click', () => syncFromGitHub(true));
+      syncBtn.addEventListener('click', () => syncFromGitHub(true));
+
+      exportJsonBtn.addEventListener('click', exportCardsJSON);
+      importJsonFile.addEventListener('change', importCardsJSON);
+
+      window.addEventListener('keydown', (e) => {
+        if (reviewModal.classList.contains('hidden')) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          toggleCardFlip();
+        } else if (e.code === 'ArrowRight') {
+          showNextReviewCard();
+        } else if (e.code === 'ArrowLeft') {
+          showPrevReviewCard();
+        } else if (e.code === 'Escape') {
+          closeReview();
+        }
+      });
+    }
+
+    // --- 設定管理 ---
     function showSettingsModal() {
       apiKeyInput.value = apiKey;
+      ghRepoInput.value = ghRepo;
+      ghTokenInput.value = ghToken;
       settingsModal.classList.remove('hidden');
     }
 
@@ -560,19 +738,26 @@ Respond ONLY in valid JSON matching this schema:
       settingsModal.classList.add('hidden');
     }
 
-    function saveApiKey() {
-      const key = apiKeyInput.value.trim();
-      if (!key) {
-        alert('請輸入有效的 API Key');
-        return;
-      }
-      apiKey = key;
+    async function saveAllSettings() {
+      apiKey = apiKeyInput.value.trim();
+      ghRepo = ghRepoInput.value.trim().replace(/^https?:\/\/github\.com\//, '').replace(/\/$/, '');
+      ghToken = ghTokenInput.value.trim();
+
       localStorage.setItem(STORAGE_KEY_API_KEY, apiKey);
+      localStorage.setItem(STORAGE_KEY_GH_REPO, ghRepo);
+      localStorage.setItem(STORAGE_KEY_GH_TOKEN, ghToken);
+
+      updateSyncBadge();
       hideSettingsModal();
-      alert('Gemini API Key 儲存成功！');
+
+      if (ghToken && ghRepo) {
+        await syncFromGitHub(true);
+      } else {
+        alert('設定已儲存！');
+      }
     }
 
-    // --- 備份與匯入功能 ---
+    // --- 備份 JSON ---
     function exportCardsJSON() {
       if (cards.length === 0) return alert('目前沒有字卡可匯出');
       const blob = new Blob([JSON.stringify(cards, null, 2)], { type: 'application/json' });
@@ -589,13 +774,14 @@ Respond ONLY in valid JSON matching this schema:
       if (!file) return;
 
       const reader = new FileReader();
-      reader.onload = (event) => {
+      reader.onload = async (event) => {
         try {
           const imported = JSON.parse(event.target.result);
           if (Array.isArray(imported)) {
             cards = imported;
-            saveCards();
+            saveCardsLocally();
             renderCards();
+            await syncToGitHub();
             alert(`成功匯入 ${imported.length} 張單字卡！`);
           } else {
             alert('檔案格式錯誤，需為陣列格式 JSON');
@@ -614,7 +800,6 @@ Respond ONLY in valid JSON matching this schema:
       );
     }
 
-    // 啟動應用
     init();
   </script>
 </body>
