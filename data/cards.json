@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108173866",
+    "front": "Ceramic",
+    "phonetic": "/səˈræmɪk/",
+    "partOfSpeech": "adj.",
+    "translation": "陶瓷的",
+    "example": "The ceramic mug keeps my coffee warm longer.",
+    "exampleTranslation": "這個陶瓷馬克杯讓我的咖啡保溫時間更長。",
+    "createdAt": 1792108173866
+  },
+  {
     "id": "card_1792108160979",
     "front": "Stoneware",
     "phonetic": "/ˈstoʊnweər/",
