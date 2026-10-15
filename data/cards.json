@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792108209575",
+    "front": "Tycoon",
+    "phonetic": "/taɪˈkuːn/",
+    "partOfSpeech": "n.",
+    "translation": "大亨，企業巨頭",
+    "example": "He is a real estate tycoon with properties all over the city.",
+    "exampleTranslation": "他是一位在全市擁有物業的房地產大亨。",
+    "createdAt": 1792108209575
+  },
+  {
     "id": "card_1792108197745",
     "front": "Mogul",
     "phonetic": "/ˈmoʊɡəl/",
