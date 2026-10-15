@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792074803847",
+    "front": "mitt",
+    "phonetic": "/mɪt/",
+    "partOfSpeech": "n.",
+    "translation": "手套",
+    "example": "She put on an oven mitt before taking the hot pan out.",
+    "exampleTranslation": "她戴上隔熱手套才把熱鍋拿出來。",
+    "createdAt": 1792074803847
+  },
+  {
     "id": "card_1792073775718",
     "front": "copter",
     "phonetic": "/ˈkɒptər/",
