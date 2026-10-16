@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143561952",
+    "front": "Aegis",
+    "phonetic": "/ˈiːdʒɪs/",
+    "partOfSpeech": "n.",
+    "translation": "保護；支持；贊助",
+    "example": "The cultural festival was held under the aegis of the city council.",
+    "exampleTranslation": "這個文化節是在市議會的贊助下舉辦的。",
+    "createdAt": 1792143561952
+  },
+  {
     "id": "card_1792143547728",
     "front": "Orzo",
     "phonetic": "/ˈɔːrzoʊ/",
