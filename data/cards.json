@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143477171",
+    "front": "Blunt",
+    "phonetic": "/blʌnt/",
+    "partOfSpeech": "adj.",
+    "translation": "坦率的，鈍的",
+    "example": "He was quite blunt about his feelings.",
+    "exampleTranslation": "他對自己的感受非常坦率。",
+    "createdAt": 1792143477171
+  },
+  {
     "id": "card_1792143459657",
     "front": "Bolt",
     "phonetic": "/boʊlt/",
