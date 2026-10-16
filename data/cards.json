@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143602353",
+    "front": "Amethyst",
+    "phonetic": "/ˈæməθɪst/",
+    "partOfSpeech": "n.",
+    "translation": "紫水晶",
+    "example": "Amethyst is a popular gemstone often used in jewelry.",
+    "exampleTranslation": "紫水晶是一種常用於珠寶的受歡迎的寶石。",
+    "createdAt": 1792143602353
+  },
+  {
     "id": "card_1792143582431",
     "front": "Yawns",
     "phonetic": "/jɔːnz/",
