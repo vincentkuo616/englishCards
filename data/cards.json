@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143374346",
+    "front": "Agates",
+    "phonetic": "/ˈæɡəts/",
+    "partOfSpeech": "n.",
+    "translation": "瑪瑙",
+    "example": "The artist polished the agates to reveal their intricate patterns.",
+    "exampleTranslation": "藝術家拋光了這些瑪瑙，以展現它們錯綜複雜的圖案。",
+    "createdAt": 1792143374346
+  },
+  {
     "id": "card_1792143333953",
     "front": "Prefab",
     "phonetic": "/ˈpriːfæb/",
