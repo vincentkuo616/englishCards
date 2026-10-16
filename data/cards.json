@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143491870",
+    "front": "Thyme",
+    "phonetic": "/taɪm/",
+    "partOfSpeech": "n.",
+    "translation": "百里香",
+    "example": "She added fresh thyme to the roasted chicken.",
+    "exampleTranslation": "她在烤雞中加入了新鮮的百里香。",
+    "createdAt": 1792143491871
+  },
+  {
     "id": "card_1792143477171",
     "front": "Blunt",
     "phonetic": "/blʌnt/",
