@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143444427",
+    "front": "Blot",
+    "phonetic": "/blɒt/",
+    "partOfSpeech": "v.",
+    "translation": "吸乾",
+    "example": "She used a paper towel to blot the spilled water.",
+    "exampleTranslation": "她用紙巾吸乾灑出的水。",
+    "createdAt": 1792143444428
+  },
+  {
     "id": "card_1792143399305",
     "front": "Chalcedony",
     "phonetic": "/kælˈsɛdəni/",
