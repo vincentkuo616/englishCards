@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143647710",
+    "front": "Pinto",
+    "phonetic": "/ˈpɪntoʊ/",
+    "partOfSpeech": "n.",
+    "translation": "花斑馬；花斑豆",
+    "example": "The ranch had a beautiful pinto with a brown and white coat.",
+    "exampleTranslation": "那個牧場有一匹毛色為棕白相間的美麗花斑馬。",
+    "createdAt": 1792143647710
+  },
+  {
     "id": "card_1792143619229",
     "front": "Ewe",
     "phonetic": "/juː/",
