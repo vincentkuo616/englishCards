@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143671070",
+    "front": "Thrash",
+    "phonetic": "/θræʃ/",
+    "partOfSpeech": "v.",
+    "translation": "痛打；劇烈擺動",
+    "example": "The fish thrashed its tail in the net.",
+    "exampleTranslation": "魚在網中甩動著尾巴。",
+    "createdAt": 1792143671070
+  },
+  {
     "id": "card_1792143619229",
     "front": "Ewe",
     "phonetic": "/juː/",
