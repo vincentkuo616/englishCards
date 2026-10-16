@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143517369",
+    "front": "Palmtops",
+    "phonetic": "/ˈpɑːmtɒps/",
+    "partOfSpeech": "n.",
+    "translation": "掌上電腦",
+    "example": "Many early palmtops struggled with battery life.",
+    "exampleTranslation": "許多早期的掌上電腦都面臨電池續航力的問題。",
+    "createdAt": 1792143517369
+  },
+  {
     "id": "card_1792143491870",
     "front": "Thyme",
     "phonetic": "/taɪm/",
