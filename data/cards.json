@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792186698271",
+    "front": "Hooves",
+    "phonetic": "/huːvz/",
+    "partOfSpeech": "n.",
+    "translation": "蹄（hoof 的複數）",
+    "example": "The sound of horses' hooves echoed down the street.",
+    "exampleTranslation": "馬蹄聲在街上迴盪。",
+    "createdAt": 1792186698271
+  },
+  {
     "id": "card_1792186661890",
     "front": "Cycads",
     "phonetic": "/ˈsaɪkædz/",
