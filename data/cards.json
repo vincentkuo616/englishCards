@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792186831690",
+    "front": "Soak",
+    "phonetic": "/soʊk/",
+    "partOfSpeech": "v.",
+    "translation": "浸泡、浸濕",
+    "example": "Soak the beans in water overnight before cooking.",
+    "exampleTranslation": "烹煮前先將豆子在水中浸泡一整晚。",
+    "createdAt": 1792186831690
+  },
+  {
     "id": "card_1792186792859",
     "front": "Grease",
     "phonetic": "/ɡriːs/",
