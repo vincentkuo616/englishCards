@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143547728",
+    "front": "Orzo",
+    "phonetic": "/ˈɔːrzoʊ/",
+    "partOfSpeech": "n.",
+    "translation": "義大利米麵",
+    "example": "We had chicken with orzo and roasted vegetables for dinner.",
+    "exampleTranslation": "我們晚餐吃了雞肉佐米麵和烤蔬菜。",
+    "createdAt": 1792143547728
+  },
+  {
     "id": "card_1792143529327",
     "front": "Cohort",
     "phonetic": "/ˈkoʊhɔːrt/",
