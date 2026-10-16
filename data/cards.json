@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143529327",
+    "front": "Cohort",
+    "phonetic": "/ˈkoʊhɔːrt/",
+    "partOfSpeech": "n.",
+    "translation": "一群人；隊伍",
+    "example": "The study followed a cohort of 500 patients over ten years.",
+    "exampleTranslation": "這項研究追蹤了500名患者組成的隊伍十年。",
+    "createdAt": 1792143529327
+  },
+  {
     "id": "card_1792143517369",
     "front": "Palmtops",
     "phonetic": "/ˈpɑːmtɒps/",
