@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792186949628",
+    "front": "Roux",
+    "phonetic": "/ruː/",
+    "partOfSpeech": "n.",
+    "translation": "油麵糊（用於勾芡或製作醬汁）",
+    "example": "Melt the butter and stir in the flour to make a roux.",
+    "exampleTranslation": "融化奶油並拌入麵粉以製作油麵糊。",
+    "createdAt": 1792186949628
+  },
+  {
     "id": "card_1792186889685",
     "front": "Halting",
     "phonetic": "/ˈhɔːltɪŋ/",
