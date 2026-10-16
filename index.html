@@ -483,7 +483,7 @@ Respond ONLY in valid JSON matching this schema:
   "exampleTranslation": "Traditional Chinese translation of the example sentence"
 }`;
 
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
       const response = await fetch(endpoint, {
         method: 'POST',
