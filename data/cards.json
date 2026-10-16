@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143333953",
+    "front": "Prefab",
+    "phonetic": "/ˈpriːfæb/",
+    "partOfSpeech": "n.",
+    "translation": "預製建築",
+    "example": "Many families moved into prefabs after the war.",
+    "exampleTranslation": "戰爭結束後，許多家庭搬進了預製建築。",
+    "createdAt": 1792143333953
+  },
+  {
     "id": "card_1792108537143",
     "front": "Antelope",
     "phonetic": "/ˈæntɪloʊp/",
