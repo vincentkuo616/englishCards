@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143459657",
+    "front": "Bolt",
+    "phonetic": "/boʊlt/",
+    "partOfSpeech": "n.",
+    "translation": "螺栓",
+    "example": "He used a bolt to secure the gate.",
+    "exampleTranslation": "他用一個螺栓固定了門。",
+    "createdAt": 1792143459657
+  },
+  {
     "id": "card_1792143444427",
     "front": "Blot",
     "phonetic": "/blɒt/",
