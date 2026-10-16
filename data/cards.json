@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143399305",
+    "front": "Chalcedony",
+    "phonetic": "/kælˈsɛdəni/",
+    "partOfSpeech": "n.",
+    "translation": "玉髓",
+    "example": "Chalcedony is a cryptocrystalline form of silica, composed of very fine intergrowths of quartz and moganite.",
+    "exampleTranslation": "玉髓是一種二氧化矽的隱晶質形式，由非常細小的石英和蒙脫石互生而成。",
+    "createdAt": 1792143399305
+  },
+  {
     "id": "card_1792143374346",
     "front": "Agates",
     "phonetic": "/ˈæɡəts/",
