@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792186889685",
+    "front": "Halting",
+    "phonetic": "/ˈhɔːltɪŋ/",
+    "partOfSpeech": "adj.",
+    "translation": "斷斷續續的；猶豫不決的",
+    "example": "She spoke in a halting voice, struggling to find the right words.",
+    "exampleTranslation": "她說話斷斷續續，努力想找出合適的詞彙。",
+    "createdAt": 1792186889685
+  },
+  {
     "id": "card_1792186831690",
     "front": "Soak",
     "phonetic": "/soʊk/",
