@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792186661890",
+    "front": "Cycads",
+    "phonetic": "/ˈsaɪkædz/",
+    "partOfSpeech": "n.",
+    "translation": "蘇鐵類植物",
+    "example": "Cycads are ancient plants that flourished during the time of the dinosaurs.",
+    "exampleTranslation": "蘇鐵是繁盛於恐龍時代的古老植物。",
+    "createdAt": 1792186661890
+  },
+  {
     "id": "card_1792155583909",
     "front": "Passe",
     "phonetic": "/pɑːˈseɪ/",
