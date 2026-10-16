@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143700355",
+    "front": "Seep",
+    "phonetic": "/siːp/",
+    "partOfSpeech": "v.",
+    "translation": "滲出，滲透",
+    "example": "Water began to seep through the cracks in the wall.",
+    "exampleTranslation": "水開始從牆壁的裂縫中滲出。",
+    "createdAt": 1792143700355
+  },
+  {
     "id": "card_1792143689325",
     "front": "Ooze",
     "phonetic": "/ˈuːz/",
