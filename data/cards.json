@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143619229",
+    "front": "Ewe",
+    "phonetic": "/juː/",
+    "partOfSpeech": "n.",
+    "translation": "母羊",
+    "example": "The ewe gave birth to two healthy lambs.",
+    "exampleTranslation": "這隻母羊生了兩隻健康的羊羔。",
+    "createdAt": 1792143619229
+  },
+  {
     "id": "card_1792143602353",
     "front": "Amethyst",
     "phonetic": "/ˈæməθɪst/",
