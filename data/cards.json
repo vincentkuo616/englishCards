@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143582431",
+    "front": "Yawns",
+    "phonetic": "/jɔːnz/",
+    "partOfSpeech": "v.",
+    "translation": "打哈欠",
+    "example": "He often yawns in the morning before his coffee.",
+    "exampleTranslation": "他早上喝咖啡前經常打哈欠。",
+    "createdAt": 1792143582431
+  },
+  {
     "id": "card_1792143561952",
     "front": "Aegis",
     "phonetic": "/ˈiːdʒɪs/",
