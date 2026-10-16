@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143689325",
+    "front": "Ooze",
+    "phonetic": "/ˈuːz/",
+    "partOfSpeech": "v.",
+    "translation": "滲出",
+    "example": "Blood began to ooze from the wound.",
+    "exampleTranslation": "血開始從傷口滲出。",
+    "createdAt": 1792143689326
+  },
+  {
     "id": "card_1792143671070",
     "front": "Thrash",
     "phonetic": "/θræʃ/",
