@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792143762587",
+    "front": "Lasso",
+    "phonetic": "/ˈlæsoʊ/",
+    "partOfSpeech": "n.",
+    "translation": "套索",
+    "example": "The cowboy used a lasso to catch the runaway horse.",
+    "exampleTranslation": "牛仔用套索套住了那匹脫韁的馬。",
+    "createdAt": 1792143762587
+  },
+  {
     "id": "card_1792143728029",
     "front": "Burst",
     "phonetic": "/bɜːrst/",
