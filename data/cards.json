@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792155583909",
+    "front": "Passe",
+    "phonetic": "/pɑːˈseɪ/",
+    "partOfSpeech": "adj.",
+    "translation": "過時的；不合時宜的",
+    "example": "That fashion trend is now completely passe.",
+    "exampleTranslation": "那種時尚潮流現在已經完全過時了。",
+    "createdAt": 1792155583909
+  },
+  {
     "id": "card_1792143762587",
     "front": "Lasso",
     "phonetic": "/ˈlæsoʊ/",
