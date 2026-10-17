@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223101712",
+    "front": "Hive",
+    "phonetic": "/haɪv/",
+    "partOfSpeech": "n.",
+    "translation": "蜂巢, 蜂箱",
+    "example": "The bees returned to their hive after gathering pollen.",
+    "exampleTranslation": "蜜蜂在採集花粉後回到了牠們的蜂巢。",
+    "createdAt": 1792223101712
+  },
+  {
     "id": "card_1792223022395",
     "front": "Tow",
     "phonetic": "/toʊ/",
