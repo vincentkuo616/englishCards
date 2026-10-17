@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223235803",
+    "front": "Neat",
+    "phonetic": "/niːt/",
+    "partOfSpeech": "adj.",
+    "translation": "整潔的",
+    "example": "Her handwriting is very neat.",
+    "exampleTranslation": "她的字跡非常整潔。",
+    "createdAt": 1792223235803
+  },
+  {
     "id": "card_1792223200728",
     "front": "Paella",
     "phonetic": "/paɪˈɛlə/",
