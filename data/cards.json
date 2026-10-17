@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223330943",
+    "front": "Polished",
+    "phonetic": "/ˈpɒlɪʃt/",
+    "partOfSpeech": "adj.",
+    "translation": "精緻的, 擦亮的",
+    "example": "Her writing style was polished and eloquent.",
+    "exampleTranslation": "她的寫作風格精緻而雄辯。",
+    "createdAt": 1792223330943
+  },
+  {
     "id": "card_1792223235803",
     "front": "Neat",
     "phonetic": "/niːt/",
