@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222884079",
+    "front": "Taper",
+    "phonetic": "/ˈteɪpər/",
+    "partOfSpeech": "v.",
+    "translation": "逐漸變細；逐漸減少",
+    "example": "The road began to taper off as we approached the village.",
+    "exampleTranslation": "當我們接近村莊時，道路開始變窄。",
+    "createdAt": 1792222884079
+  },
+  {
     "id": "card_1792222841101",
     "front": "Hectare",
     "phonetic": "/ˈhɛkˌtɛər/",
