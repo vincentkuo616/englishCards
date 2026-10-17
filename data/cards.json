@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222841101",
+    "front": "Hectare",
+    "phonetic": "/ˈhɛkˌtɛər/",
+    "partOfSpeech": "n.",
+    "translation": "公頃",
+    "example": "The estate covers an area of fifty hectares.",
+    "exampleTranslation": "這塊莊園佔地五十公頃。",
+    "createdAt": 1792222841101
+  },
+  {
     "id": "card_1792222754207",
     "front": "Plateau",
     "phonetic": "/plæˈtoʊ/",
