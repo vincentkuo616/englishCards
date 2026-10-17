@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222923233",
+    "front": "Frail",
+    "phonetic": "/freɪl/",
+    "partOfSpeech": "adj.",
+    "translation": "脆弱的, 虛弱的",
+    "example": "The frail bridge looked like it could collapse at any moment.",
+    "exampleTranslation": "那座脆弱的橋樑看起來隨時都可能坍塌。",
+    "createdAt": 1792222923233
+  },
+  {
     "id": "card_1792222884079",
     "front": "Taper",
     "phonetic": "/ˈteɪpər/",
