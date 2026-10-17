@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792195998333",
+    "front": "Newts",
+    "phonetic": "/nuːts/",
+    "partOfSpeech": "n.",
+    "translation": "蠑螈",
+    "example": "Newts spend part of their lives in the water and part on land.",
+    "exampleTranslation": "蠑螈一生中有一部分時間在水中度過，一部分時間在陸地上。",
+    "createdAt": 1792195998334
+  },
+  {
     "id": "card_1792186949628",
     "front": "Roux",
     "phonetic": "/ruː/",
