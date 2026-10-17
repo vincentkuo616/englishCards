@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223421402",
+    "front": "Tidal",
+    "phonetic": "/ˈtaɪdl/",
+    "partOfSpeech": "adj.",
+    "translation": "潮汐的, 潮的",
+    "example": "The beach is affected by tidal currents.",
+    "exampleTranslation": "海灘受到潮汐洋流的影響。",
+    "createdAt": 1792223421402
+  },
+  {
     "id": "card_1792223330943",
     "front": "Polished",
     "phonetic": "/ˈpɒlɪʃt/",
