@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223200728",
+    "front": "Paella",
+    "phonetic": "/paɪˈɛlə/",
+    "partOfSpeech": "n.",
+    "translation": "西班牙海鮮飯",
+    "example": "We had paella for dinner last night.",
+    "exampleTranslation": "我們昨晚吃了西班牙海鮮飯當晚餐。",
+    "createdAt": 1792223200729
+  },
+  {
     "id": "card_1792223101712",
     "front": "Hive",
     "phonetic": "/haɪv/",
