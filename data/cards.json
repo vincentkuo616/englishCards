@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222594633",
+    "front": "Attire",
+    "phonetic": "/əˈtaɪər/",
+    "partOfSpeech": "n.",
+    "translation": "服裝, 穿著",
+    "example": "Formal attire is required for the gala dinner.",
+    "exampleTranslation": "晚宴需要穿著正式服裝。",
+    "createdAt": 1792222594633
+  },
+  {
     "id": "card_1792203918249",
     "front": "Ovals",
     "phonetic": "/ˈoʊvəlz/",
