@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792223022395",
+    "front": "Tow",
+    "phonetic": "/toʊ/",
+    "partOfSpeech": "v.",
+    "translation": "拖；牽引",
+    "example": "We had to tow the broken-down car to the garage.",
+    "exampleTranslation": "我們不得不把拋錨的車拖到修車廠。",
+    "createdAt": 1792223022395
+  },
+  {
     "id": "card_1792222992958",
     "front": "Ensue",
     "phonetic": "/ɪnˈsuː/",
