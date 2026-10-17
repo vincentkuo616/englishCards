@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222754207",
+    "front": "Plateau",
+    "phonetic": "/plæˈtoʊ/",
+    "partOfSpeech": "n.",
+    "translation": "高原；停滯期",
+    "example": "The company's profits reached a plateau after years of steady growth.",
+    "exampleTranslation": "公司利潤在多年穩定增長後進入了停滯期。",
+    "createdAt": 1792222754207
+  },
+  {
     "id": "card_1792222594633",
     "front": "Attire",
     "phonetic": "/əˈtaɪər/",
