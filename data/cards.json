@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792222992958",
+    "front": "Ensue",
+    "phonetic": "/ɪnˈsuː/",
+    "partOfSpeech": "v.",
+    "translation": "接著發生，隨後發生，因而產生",
+    "example": "A heated debate ensued after the controversial announcement.",
+    "exampleTranslation": "在具爭議性的公告之後，隨即引發了一場激烈的辯論。",
+    "createdAt": 1792222992958
+  },
+  {
     "id": "card_1792222923233",
     "front": "Frail",
     "phonetic": "/freɪl/",
