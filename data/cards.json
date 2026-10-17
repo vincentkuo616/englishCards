@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792203918249",
+    "front": "Ovals",
+    "phonetic": "/ˈoʊvəlz/",
+    "partOfSpeech": "n.",
+    "translation": "橢圓形；卵形",
+    "example": "The artist painted a series of ovals with vibrant colors.",
+    "exampleTranslation": "這位藝術家畫了一系列色彩鮮豔的橢圓形。",
+    "createdAt": 1792203918249
+  },
+  {
     "id": "card_1792195998333",
     "front": "Newts",
     "phonetic": "/nuːts/",
