@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323604427",
+    "front": "Sessions",
+    "phonetic": "/ˈseʃənz/",
+    "partOfSpeech": "n.",
+    "translation": "會議；會期；課時",
+    "example": "The training program consisted of ten intensive sessions.",
+    "exampleTranslation": "該培訓計畫包含十個密集的課程。",
+    "createdAt": 1792323604427
+  },
+  {
     "id": "card_1792323543178",
     "front": "Lure",
     "phonetic": "/lʊər/",
