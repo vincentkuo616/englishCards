@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792322998464",
+    "front": "Rip",
+    "phonetic": "/rɪp/",
+    "partOfSpeech": "v.",
+    "translation": "撕裂",
+    "example": "Please don't rip the new book.",
+    "exampleTranslation": "請不要撕破這本新書。",
+    "createdAt": 1792322998465
+  },
+  {
     "id": "card_1792322981426",
     "front": "Trombone",
     "phonetic": "/trɑːmˈboʊn/",
