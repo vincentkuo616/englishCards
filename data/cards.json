@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323738827",
+    "front": "Mint",
+    "phonetic": "/mɪnt/",
+    "partOfSpeech": "n.",
+    "translation": "薄荷",
+    "example": "I enjoy a refreshing cup of mint tea.",
+    "exampleTranslation": "我喜歡喝一杯提神的薄荷茶。",
+    "createdAt": 1792323738827
+  },
+  {
     "id": "card_1792323714193",
     "front": "Oarsmen",
     "phonetic": "/ˈɔːrzmən/",
