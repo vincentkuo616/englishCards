@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323667682",
+    "front": "Aerosolize",
+    "phonetic": "/ˌɛrəˈsɒlaɪz/",
+    "partOfSpeech": "v.",
+    "translation": "霧化",
+    "example": "Some medical devices can aerosolize liquid medication for easier inhalation.",
+    "exampleTranslation": "一些醫療設備可以將液體藥物霧化，以便更容易吸入。",
+    "createdAt": 1792323667682
+  },
+  {
     "id": "card_1792323604427",
     "front": "Sessions",
     "phonetic": "/ˈseʃənz/",
