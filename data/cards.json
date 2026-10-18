@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323505338",
+    "front": "Unwind",
+    "phonetic": "/ʌnˈwaɪnd/",
+    "partOfSpeech": "v.",
+    "translation": "放鬆",
+    "example": "After a long day at work, I like to unwind by reading a book.",
+    "exampleTranslation": "工作了一整天之後，我喜歡透過閱讀來放鬆。",
+    "createdAt": 1792323505338
+  },
+  {
     "id": "card_1792323473494",
     "front": "Igloo",
     "phonetic": "/ˈɪɡluː/",
