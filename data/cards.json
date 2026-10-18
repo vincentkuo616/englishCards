@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323714193",
+    "front": "Oarsmen",
+    "phonetic": "/ˈɔːrzmən/",
+    "partOfSpeech": "n.",
+    "translation": "划手；槳手",
+    "example": "The oarsmen trained rigorously for the upcoming regatta.",
+    "exampleTranslation": "槳手們為即將到來的賽船會進行了嚴格的訓練。",
+    "createdAt": 1792323714193
+  },
+  {
     "id": "card_1792323667682",
     "front": "Aerosolize",
     "phonetic": "/ˌɛrəˈsɒlaɪz/",
