@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792322879061",
+    "front": "Cliche",
+    "phonetic": "/kliˈʃeɪ/",
+    "partOfSpeech": "n.",
+    "translation": "陳腔濫調",
+    "example": "His speech was full of cliches about success.",
+    "exampleTranslation": "他的演講充滿了關於成功的陳腔濫調。",
+    "createdAt": 1792322879061
+  },
+  {
     "id": "card_1792322863944",
     "front": "Truism",
     "phonetic": "/ˈtruːɪzəm/",
