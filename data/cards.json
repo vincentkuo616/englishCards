@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323543178",
+    "front": "Lure",
+    "phonetic": "/lʊər/",
+    "partOfSpeech": "v.",
+    "translation": "引誘",
+    "example": "The promise of a higher salary can often lure talented employees away from their current jobs.",
+    "exampleTranslation": "更高薪水的承諾常常能吸引有才華的員工離開他們目前的工作。",
+    "createdAt": 1792323543178
+  },
+  {
     "id": "card_1792323535616",
     "front": "Entice",
     "phonetic": "/ɪnˈtaɪs/",
