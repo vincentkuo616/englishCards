@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792322957828",
+    "front": "Grebe",
+    "phonetic": "/ɡriːb/",
+    "partOfSpeech": "n.",
+    "translation": "鸊鷉",
+    "example": "The grebe is known for its incredible diving ability.",
+    "exampleTranslation": "鸊鷉以其驚人的潛水能力而聞名。",
+    "createdAt": 1792322957828
+  },
+  {
     "id": "card_1792322879061",
     "front": "Cliche",
     "phonetic": "/kliˈʃeɪ/",
