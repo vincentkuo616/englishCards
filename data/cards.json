@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792322981426",
+    "front": "Trombone",
+    "phonetic": "/trɑːmˈboʊn/",
+    "partOfSpeech": "n.",
+    "translation": "長號",
+    "example": "The musician played a powerful solo on the trombone.",
+    "exampleTranslation": "那位音樂家在長號上演奏了一段強而有力的獨奏。",
+    "createdAt": 1792322981426
+  },
+  {
     "id": "card_1792322957828",
     "front": "Grebe",
     "phonetic": "/ɡriːb/",
