@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323410778",
+    "front": "Caption",
+    "phonetic": "/ˈkæpʃən/",
+    "partOfSpeech": "n.",
+    "translation": "字幕；標題；說明文字",
+    "example": "Please add a caption to this image.",
+    "exampleTranslation": "請為這張圖片加上說明文字。",
+    "createdAt": 1792323410778
+  },
+  {
     "id": "card_1792323357476",
     "front": "Modem",
     "phonetic": "/ˈmoʊdɛm/",
