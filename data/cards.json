@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323115667",
+    "front": "Usher",
+    "phonetic": "/ˈʌʃər/",
+    "partOfSpeech": "v.",
+    "translation": "引導；引領",
+    "example": "The assistant will usher you into the meeting room.",
+    "exampleTranslation": "助理會引導您進入會議室。",
+    "createdAt": 1792323115667
+  },
+  {
     "id": "card_1792322998464",
     "front": "Rip",
     "phonetic": "/rɪp/",
