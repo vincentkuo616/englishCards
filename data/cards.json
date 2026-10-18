@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323357476",
+    "front": "Modem",
+    "phonetic": "/ˈmoʊdɛm/",
+    "partOfSpeech": "n.",
+    "translation": "數據機",
+    "example": "You'll need a modem to connect to the internet.",
+    "exampleTranslation": "你需要數據機才能連接到網際網路。",
+    "createdAt": 1792323357477
+  },
+  {
     "id": "card_1792323115667",
     "front": "Usher",
     "phonetic": "/ˈʌʃər/",
