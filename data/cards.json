@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323473494",
+    "front": "Igloo",
+    "phonetic": "/ˈɪɡluː/",
+    "partOfSpeech": "n.",
+    "translation": "冰屋，圓頂雪屋",
+    "example": "An igloo is a type of shelter built from blocks of snow.",
+    "exampleTranslation": "冰屋是一種用雪塊建造的住所。",
+    "createdAt": 1792323473494
+  },
+  {
     "id": "card_1792323410778",
     "front": "Caption",
     "phonetic": "/ˈkæpʃən/",
