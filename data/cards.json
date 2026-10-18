@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792322863944",
+    "front": "Truism",
+    "phonetic": "/ˈtruːɪzəm/",
+    "partOfSpeech": "n.",
+    "translation": "真理；老生常談；不言自明的事實",
+    "example": "It's a truism that you can't please everyone.",
+    "exampleTranslation": "取悅所有人是不可能的，這是個不言自明的事實。",
+    "createdAt": 1792322863944
+  },
+  {
     "id": "card_1792223421402",
     "front": "Tidal",
     "phonetic": "/ˈtaɪdl/",
