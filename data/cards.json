@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323535616",
+    "front": "Entice",
+    "phonetic": "/ɪnˈtaɪs/",
+    "partOfSpeech": "v.",
+    "translation": "引誘, 誘惑",
+    "example": "The colorful advertisement was designed to entice customers into buying the new product.",
+    "exampleTranslation": "那個色彩繽紛的廣告旨在引誘顧客購買新產品。",
+    "createdAt": 1792323535624
+  },
+  {
     "id": "card_1792323505338",
     "front": "Unwind",
     "phonetic": "/ʌnˈwaɪnd/",
