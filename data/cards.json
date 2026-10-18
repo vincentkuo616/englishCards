@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792323751990",
+    "front": "Indigo",
+    "phonetic": "/ˈɪndɪɡoʊ/",
+    "partOfSpeech": "n.",
+    "translation": "靛藍色",
+    "example": "Indigo is a deep blue color, often seen in denim.",
+    "exampleTranslation": "靛藍色是一種深藍色，常在牛仔布中看到。",
+    "createdAt": 1792323751990
+  },
+  {
     "id": "card_1792323738827",
     "front": "Mint",
     "phonetic": "/mɪnt/",
