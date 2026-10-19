@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368240192",
+    "front": "Mantle",
+    "phonetic": "/ˈmæntl/",
+    "partOfSpeech": "n.",
+    "translation": "披風；斗篷；覆蓋物；地幔；責任",
+    "example": "The young king was ready to take on the mantle of his father.",
+    "exampleTranslation": "這位年輕的國王已準備好承擔他父親的責任。",
+    "createdAt": 1792368240192
+  },
+  {
     "id": "card_1792323751990",
     "front": "Indigo",
     "phonetic": "/ˈɪndɪɡoʊ/",
