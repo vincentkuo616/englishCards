@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368710612",
+    "front": "Ado",
+    "phonetic": "/əˈduː/",
+    "partOfSpeech": "n.",
+    "translation": "喧囂；紛擾；忙亂",
+    "example": "There was much ado about the new policy, but it eventually passed without much trouble.",
+    "exampleTranslation": "關於這項新政策有許多紛擾，但它最終還是順利通過了。",
+    "createdAt": 1792368710612
+  },
+  {
     "id": "card_1792368549628",
     "front": "Mandolin",
     "phonetic": "/ˌmæn.dəˈlɪn/",
