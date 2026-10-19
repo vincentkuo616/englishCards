@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368339203",
+    "front": "Fibber",
+    "phonetic": "/ˈfɪbər/",
+    "partOfSpeech": "n.",
+    "translation": "說謊者",
+    "example": "My little brother is a bit of a fibber when he tries to avoid chores.",
+    "exampleTranslation": "我的小弟在試圖逃避家務時，有點愛說謊。",
+    "createdAt": 1792368339203
+  },
+  {
     "id": "card_1792368301045",
     "front": "Rig",
     "phonetic": "/rɪɡ/",
