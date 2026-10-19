@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368258160",
+    "front": "Cape",
+    "phonetic": "/keɪp/",
+    "partOfSpeech": "n.",
+    "translation": "海角；岬；斗篷",
+    "example": "The ship sailed around the Cape.",
+    "exampleTranslation": "船隻繞過了海角。",
+    "createdAt": 1792368258160
+  },
+  {
     "id": "card_1792368240192",
     "front": "Mantle",
     "phonetic": "/ˈmæntl/",
