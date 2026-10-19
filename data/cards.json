@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368427307",
+    "front": "Idyllic",
+    "phonetic": "/ɪˈdɪlɪk/",
+    "partOfSpeech": "adj.",
+    "translation": "田園詩般的",
+    "example": "The couple spent their honeymoon in an idyllic cottage by the sea.",
+    "exampleTranslation": "這對夫婦在海邊的一座田園詩般的小屋度過了蜜月。",
+    "createdAt": 1792368427307
+  },
+  {
     "id": "card_1792368339203",
     "front": "Fibber",
     "phonetic": "/ˈfɪbər/",
