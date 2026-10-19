@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368766653",
+    "front": "Fuss",
+    "phonetic": "/fʌs/",
+    "partOfSpeech": "n.",
+    "translation": "騷動；小題大作",
+    "example": "She made a big fuss over the broken vase.",
+    "exampleTranslation": "她對破碎的花瓶大驚小怪。",
+    "createdAt": 1792368766653
+  },
+  {
     "id": "card_1792368710612",
     "front": "Ado",
     "phonetic": "/əˈduː/",
