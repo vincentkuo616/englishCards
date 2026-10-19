@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368549628",
+    "front": "Mandolin",
+    "phonetic": "/ˌmæn.dəˈlɪn/",
+    "partOfSpeech": "n.",
+    "translation": "曼陀林",
+    "example": "She learned to play the mandolin at a young age.",
+    "exampleTranslation": "她從小就學習彈奏曼陀林。",
+    "createdAt": 1792368549628
+  },
+  {
     "id": "card_1792368427307",
     "front": "Idyllic",
     "phonetic": "/ɪˈdɪlɪk/",
