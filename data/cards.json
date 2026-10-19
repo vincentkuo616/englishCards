@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792368301045",
+    "front": "Rig",
+    "phonetic": "/rɪɡ/",
+    "partOfSpeech": "v.",
+    "translation": "操縱；舞弊",
+    "example": "They tried to rig the election results.",
+    "exampleTranslation": "他們試圖操縱選舉結果。",
+    "createdAt": 1792368301045
+  },
+  {
     "id": "card_1792368258160",
     "front": "Cape",
     "phonetic": "/keɪp/",
