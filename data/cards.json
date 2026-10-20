@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508504736",
+    "front": "Amend",
+    "phonetic": "/əˈmɛnd/",
+    "partOfSpeech": "v.",
+    "translation": "修改，修正，改善",
+    "example": "The committee voted to amend the constitution.",
+    "exampleTranslation": "委員會投票決定修改憲法。",
+    "createdAt": 1792508504737
+  },
+  {
     "id": "card_1792508493117",
     "front": "Atonement",
     "phonetic": "/əˈtoʊn.mənt/",
