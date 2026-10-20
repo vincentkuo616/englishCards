@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508341868",
+    "front": "Lilt",
+    "phonetic": "/lɪlt/",
+    "partOfSpeech": "n.",
+    "translation": "輕快活潑的調子；抑揚頓挫",
+    "example": "She spoke with a charming Irish lilt.",
+    "exampleTranslation": "她說話帶有迷人的愛爾蘭抑揚頓挫。",
+    "createdAt": 1792508341868
+  },
+  {
     "id": "card_1792368766653",
     "front": "Fuss",
     "phonetic": "/fʌs/",
