@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508436088",
+    "front": "Pastry",
+    "phonetic": "/ˈpeɪstri/",
+    "partOfSpeech": "n.",
+    "translation": "糕點",
+    "example": "She bought a fresh pastry from the bakery.",
+    "exampleTranslation": "她從麵包店買了一個新鮮的糕點。",
+    "createdAt": 1792508436088
+  },
+  {
     "id": "card_1792508424097",
     "front": "Confectionery",
     "phonetic": "/kənˈfɛkʃəˌnɛri/",
