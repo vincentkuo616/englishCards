@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508532534",
+    "front": "Gully",
+    "phonetic": "/ˈɡʌli/",
+    "partOfSpeech": "n.",
+    "translation": "溝壑；沖溝",
+    "example": "The heavy rain created a deep gully in the hillside.",
+    "exampleTranslation": "大雨在山坡上沖刷出了一道深溝。",
+    "createdAt": 1792508532534
+  },
+  {
     "id": "card_1792508504736",
     "front": "Amend",
     "phonetic": "/əˈmɛnd/",
