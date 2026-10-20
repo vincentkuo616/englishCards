@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508376779",
+    "front": "Ethic",
+    "phonetic": "/ˈɛθɪk/",
+    "partOfSpeech": "n.",
+    "translation": "倫理；道德準則",
+    "example": "He lives by a strong personal ethic.",
+    "exampleTranslation": "他依循著一套強烈的個人道德準則生活。",
+    "createdAt": 1792508376779
+  },
+  {
     "id": "card_1792508341868",
     "front": "Lilt",
     "phonetic": "/lɪlt/",
