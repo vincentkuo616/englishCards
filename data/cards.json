@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508544625",
+    "front": "Moat",
+    "phonetic": "/moʊt/",
+    "partOfSpeech": "n.",
+    "translation": "護城河",
+    "example": "The castle's moat was filled with water to deter attackers.",
+    "exampleTranslation": "城堡的護城河裡灌滿了水，以阻止攻擊者。",
+    "createdAt": 1792508544625
+  },
+  {
     "id": "card_1792508532534",
     "front": "Gully",
     "phonetic": "/ˈɡʌli/",
