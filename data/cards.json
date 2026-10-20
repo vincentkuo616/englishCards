@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508424097",
+    "front": "Confectionery",
+    "phonetic": "/kənˈfɛkʃəˌnɛri/",
+    "partOfSpeech": "n.",
+    "translation": "糖果; 糕點; 糖果店",
+    "example": "The confectionery section of the supermarket was filled with colorful sweets.",
+    "exampleTranslation": "超市的糖果區擺滿了五顏六色的甜食。",
+    "createdAt": 1792508424097
+  },
+  {
     "id": "card_1792508376779",
     "front": "Ethic",
     "phonetic": "/ˈɛθɪk/",
