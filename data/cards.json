@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792508493117",
+    "front": "Atonement",
+    "phonetic": "/əˈtoʊn.mənt/",
+    "partOfSpeech": "n.",
+    "translation": "贖罪",
+    "example": "He sought atonement for his past mistakes.",
+    "exampleTranslation": "他為過去的錯誤尋求贖罪。",
+    "createdAt": 1792508493117
+  },
+  {
     "id": "card_1792508436088",
     "front": "Pastry",
     "phonetic": "/ˈpeɪstri/",
