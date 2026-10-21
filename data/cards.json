@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792593083528",
+    "front": "Begrudge",
+    "phonetic": "/bɪˈɡrʌdʒ/",
+    "partOfSpeech": "v.",
+    "translation": "嫉妒; 吝惜; 不樂意給予",
+    "example": "I don't begrudge him his success.",
+    "exampleTranslation": "我不會嫉妒他的成功。",
+    "createdAt": 1792593083528
+  },
+  {
     "id": "card_1792593056402",
     "front": "Resent",
     "phonetic": "/rɪˈzɛnt/",
