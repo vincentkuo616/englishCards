@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792592886341",
+    "front": "Nape",
+    "phonetic": "/neɪp/",
+    "partOfSpeech": "n.",
+    "translation": "頸背",
+    "example": "He felt a chill on the nape of his neck.",
+    "exampleTranslation": "他感覺到頸背一陣涼意。",
+    "createdAt": 1792592886341
+  },
+  {
     "id": "card_1792592865622",
     "front": "Awe",
     "phonetic": "/ɔː/",
