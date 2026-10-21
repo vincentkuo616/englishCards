@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792593056402",
+    "front": "Resent",
+    "phonetic": "/rɪˈzɛnt/",
+    "partOfSpeech": "v.",
+    "translation": "怨恨，憤恨",
+    "example": "She began to resent his constant criticism.",
+    "exampleTranslation": "她開始怨恨他沒完沒了的批評。",
+    "createdAt": 1792593056402
+  },
+  {
     "id": "card_1792593026393",
     "front": "Omits",
     "phonetic": "/oʊˈmɪts/",
