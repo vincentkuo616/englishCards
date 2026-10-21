@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792592979085",
+    "front": "Mend",
+    "phonetic": "/mɛnd/",
+    "partOfSpeech": "v.",
+    "translation": "修補, 修復, 改善",
+    "example": "He decided to mend his ways and be more responsible.",
+    "exampleTranslation": "他決定改過自新，變得更負責任。",
+    "createdAt": 1792592979085
+  },
+  {
     "id": "card_1792592912737",
     "front": "Weave",
     "phonetic": "/wiːv/",
