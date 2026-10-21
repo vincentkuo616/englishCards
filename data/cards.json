@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792592865622",
+    "front": "Awe",
+    "phonetic": "/ɔː/",
+    "partOfSpeech": "n.",
+    "translation": "敬畏",
+    "example": "The beauty of the mountains filled us with awe.",
+    "exampleTranslation": "山巒之美讓我們充滿敬畏。",
+    "createdAt": 1792592865623
+  },
+  {
     "id": "card_1792592167449",
     "front": "Safflower",
     "phonetic": "/ˈsæflaʊər/",
