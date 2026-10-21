@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792592167449",
+    "front": "Safflower",
+    "phonetic": "/ˈsæflaʊər/",
+    "partOfSpeech": "n.",
+    "translation": "紅花",
+    "example": "Safflower oil is commonly used in cooking and for its health benefits.",
+    "exampleTranslation": "紅花油常用於烹飪並具有健康益處。",
+    "createdAt": 1792592167449
+  },
+  {
     "id": "card_1792508544625",
     "front": "Moat",
     "phonetic": "/moʊt/",
