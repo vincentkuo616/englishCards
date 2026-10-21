@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792593026393",
+    "front": "Omits",
+    "phonetic": "/oʊˈmɪts/",
+    "partOfSpeech": "v.",
+    "translation": "遺漏，省略",
+    "example": "The report omits crucial information about the project's costs.",
+    "exampleTranslation": "該報告遺漏了有關項目成本的關鍵資訊。",
+    "createdAt": 1792593026393
+  },
+  {
     "id": "card_1792592979085",
     "front": "Mend",
     "phonetic": "/mɛnd/",
