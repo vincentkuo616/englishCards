@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1792592912737",
+    "front": "Weave",
+    "phonetic": "/wiːv/",
+    "partOfSpeech": "v.",
+    "translation": "編織；織成",
+    "example": "She began to weave a beautiful pattern into the fabric.",
+    "exampleTranslation": "她開始在布料上編織出美麗的圖案。",
+    "createdAt": 1792592912737
+  },
+  {
     "id": "card_1792592886341",
     "front": "Nape",
     "phonetic": "/neɪp/",
