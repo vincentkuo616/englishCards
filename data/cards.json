@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885745355",
+    "front": "Tractor",
+    "phonetic": "/ˈtræktər/",
+    "partOfSpeech": "n.",
+    "translation": "拖拉機",
+    "example": "The farmer used a tractor to plow the field.",
+    "exampleTranslation": "農夫用拖拉機耕地。",
+    "createdAt": 1793885745356
+  },
+  {
     "id": "card_1792593083528",
     "front": "Begrudge",
     "phonetic": "/bɪˈɡrʌdʒ/",
