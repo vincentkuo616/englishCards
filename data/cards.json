@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885964827",
+    "front": "Scraped",
+    "phonetic": "/ˈskreɪpt/",
+    "partOfSpeech": "v.",
+    "translation": "刮傷，擦傷，勉強通過",
+    "example": "She scraped her car against the wall.",
+    "exampleTranslation": "她的車擦到了牆壁。",
+    "createdAt": 1793885964827
+  },
+  {
     "id": "card_1793885873072",
     "front": "Elm",
     "phonetic": "/ɛlm/",
