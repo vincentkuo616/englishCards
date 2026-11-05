@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885854804",
+    "front": "Pickle",
+    "phonetic": "/ˈpɪkəl/",
+    "partOfSpeech": "n.",
+    "translation": "醃菜",
+    "example": "She enjoys a dill pickle with her sandwich.",
+    "exampleTranslation": "她喜歡在三明治裡搭配一份蒔蘿醃菜。",
+    "createdAt": 1793885854804
+  },
+  {
     "id": "card_1793885806206",
     "front": "Skinflint",
     "phonetic": "/ˈskɪnflɪnt/",
