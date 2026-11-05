@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885778787",
+    "front": "Miser",
+    "phonetic": "/ˈmaɪzər/",
+    "partOfSpeech": "n.",
+    "translation": "守財奴",
+    "example": "He was such a miser that he refused to turn on the heating even in winter.",
+    "exampleTranslation": "他是個那樣的守財奴，甚至在冬天也拒絕開暖氣。",
+    "createdAt": 1793885778787
+  },
+  {
     "id": "card_1793885745355",
     "front": "Tractor",
     "phonetic": "/ˈtræktər/",
