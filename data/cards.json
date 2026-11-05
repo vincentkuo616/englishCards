@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885873072",
+    "front": "Elm",
+    "phonetic": "/ɛlm/",
+    "partOfSpeech": "n.",
+    "translation": "榆樹",
+    "example": "The street was lined with beautiful elm trees.",
+    "exampleTranslation": "街道兩旁種滿了美麗的榆樹。",
+    "createdAt": 1793885873072
+  },
+  {
     "id": "card_1793885854804",
     "front": "Pickle",
     "phonetic": "/ˈpɪkəl/",
