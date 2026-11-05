@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885806206",
+    "front": "Skinflint",
+    "phonetic": "/ˈskɪnflɪnt/",
+    "partOfSpeech": "n.",
+    "translation": "吝嗇鬼, 守財奴",
+    "example": "He's known as a skinflint because he refuses to spend money on anything but necessities.",
+    "exampleTranslation": "他以吝嗇鬼聞名，因為他除了必需品外拒絕花錢買任何東西。",
+    "createdAt": 1793885806206
+  },
+  {
     "id": "card_1793885778787",
     "front": "Miser",
     "phonetic": "/ˈmaɪzər/",
