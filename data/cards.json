@@ -1,5 +1,15 @@
 [
   {
+    "id": "card_1793885977992",
+    "front": "Rubbed",
+    "phonetic": "/rʌbd/",
+    "partOfSpeech": "v.",
+    "translation": "摩擦過, 擦過",
+    "example": "He rubbed his eyes when he woke up.",
+    "exampleTranslation": "他醒來時揉了揉眼睛。",
+    "createdAt": 1793885977992
+  },
+  {
     "id": "card_1793885964827",
     "front": "Scraped",
     "phonetic": "/ˈskreɪpt/",
